@@ -23,7 +23,7 @@ export const FormBot = () => {
                 {section === "start" && (
                     <section className="section-div">
                         <p>Hejsan! Har du en villatomt i Stockholm?</p>
-                        <button className="ja-knapp" type="submit" onClick={e => setSection("harTomt")}>JA</button>
+                        <button className="ja-knapp" type="submit" onClick={e => setSection("harTomt")}>Ja</button>
                         <button className="nej-knapp" type="submit" onClick={e => setSection("ingenTomt")}>Nej</button>
                     </section>
                 )}
@@ -39,7 +39,7 @@ export const FormBot = () => {
                             </p>
                         <div>
                             <p>Kan du tänka dig investera lite själv?</p>
-                            <button className="ja-knapp" type="submit" onClick={e => setSection("villInvestera")}>JA</button>
+                            <button className="ja-knapp" type="submit" onClick={e => setSection("villInvestera")}>ja</button>
                             <button className="nej-knapp" type="submit" onClick={e => setSection("villInteInvestera")}>Nej</button>
                         </div>
                     </div>
@@ -53,9 +53,9 @@ export const FormBot = () => {
                 )}
                 {section === "villInvestera" && (
                     <div>
-                        <p>Toppen, hur mycket ungfär?</p>
+                        <p>Toppen, ungfär hur mycket?</p>
                         <fieldset>
-                            <button className="order-knapp" type="submit" disabled={summa === ""} onClick={e => setSection("huslan")} >Välj summa</button>
+                            <button className="order-knapp" type="submit" disabled={valdSumma === ""} onClick={e => setSection("huslan")} >Välj summa</button>
                             <InvestSumma valdsumma={valdSumma} setValdSumma={setValdSumma} summa={summa} />
                         </fieldset>
                     </div>
@@ -79,7 +79,7 @@ export const FormBot = () => {
                     <div>
                         <p>Okej! Vad har du för ränta? </p>
                         <fieldset id="submit">
-                            <legend>fyll i i % form</legend>
+                            <legend>fyll i % form. ex: 1.75</legend>
                             <RantaSumma ranta={ranta} setRanta={setRanta} />
                             <button className="order-knapp" type="submit" disabled={ranta === ""} onClick={e => setSection("samanfatta")}>Välj & räkna ut!</button>
                         </fieldset>

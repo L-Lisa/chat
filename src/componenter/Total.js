@@ -19,7 +19,8 @@ export const Total = ({ ranta, husLan }) => {
     }
     return (
         < div >
-            <p>Du kan spara pengar, detta är en fingervisning, vi sänker din månadskostnad med några procent</p>
+            <p>Genom våra smarta avtal med bankerna så kan du faktiskt sänka din nuvarande kostnad med några procent per månad om du låter oss bygga ett atterfallshus på din tomt och hyra ut den.
+               </p>
             <button onClick={() => setBilligare(NyttLan(), setSparad(SparadSumma()))}>
                 Räkna besparingar</button>
             {billigare && <p>Din nya månadskostnad blir{billigare}kr</p>}
