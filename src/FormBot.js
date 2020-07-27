@@ -44,9 +44,11 @@ export const FormBot = () => {
                         </div>
                     </div>
                 )}
-                {section === "villInteInverstera" && (
+                {section === "villInteInvestera" && (
                     <div>
                         <p>Inga problem, vi fixar kapital!</p>
+                        <p>Förutom inkomsten kan vi sänka din månadskostnad på huslånet, tryck för att se mer</p>
+                        <button className="ja-knapp" type="submit" onClick={e => setSection("huslan")}>Räkna</button>
                     </div>
                 )}
                 {section === "villInvestera" && (
