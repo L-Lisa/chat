@@ -23,7 +23,7 @@ export const Total = ({ ranta, husLan }) => {
                </p>
             <button onClick={() => setBilligare(NyttLan(), setSparad(SparadSumma()))}>
                 Räkna besparingar</button>
-            {billigare && <p>Din nya månadskostnad blir{billigare}kr</p>}
+            {billigare && <p>Din nya månadskostnad blir {billigare}kr</p>}
             {sparad && <p>Varje månad sparar du {sparad}kr</p>}
         </div >
     )
